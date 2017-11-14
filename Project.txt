@@ -1,1 +1,11 @@
-testing
+Algorithm
+
+Declare all variables in .data
+Ask user to enter up to 8 characters
+Make clear a character can be either 0-9, a-z or A-Z
+Store user input in register
+Make sure input is valid
+Create a loop used to examine each character
+Use formula to calculate the decimal equivalent of the hex string
+Loop ends when all characters have been accounted for
+Output the decimal number
