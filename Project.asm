@@ -1,7 +1,6 @@
 .data
 
-output1: .asciiz "Please input a string that contains the characters 0-9, a-z and or A-B. \n \n"
-output2: .asciiz "\nYour output in decimal is: "
+output: .asciiz "\nYour output in decimal is: "
 invalid_string: .asciiz "String is invalid"
 newLine: .asciiz "\n"
 userInput: .space 9
@@ -10,11 +9,6 @@ userInput: .space 9
 .text
 
 main:
-
-	#display instructions
-	la $a0, output1
-	li $v0, 4
-	syscall
 
 	#Get user input as text
 	la $a0, userInput
@@ -155,7 +149,7 @@ main:
 	endWhile:
 
 	#message
-	la $a0, output2
+	la $a0, output
 	li $v0, 4
 	syscall
 	
