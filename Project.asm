@@ -1,8 +1,6 @@
 .data
 
-output: .asciiz "\nYour output in decimal is: "
 invalid_string: .asciiz "String is invalid"
-newLine: .asciiz "\n"
 userInput: .space 9
 
 
@@ -16,10 +14,6 @@ main:
 	li $v0, 8
 	syscall
 	
-	#newline
-	la $a0, newLine
-	li $v0, 4
-	syscall
 	
 
 	#Get number of characters
@@ -148,20 +142,11 @@ main:
 		 		 		 		 	
 	endWhile:
 
-	#message
-	la $a0, output
-	li $v0, 4
-	syscall
-	
 	#output decimal
 	la $a0, 0($s2)
 	li $v0, 1 #11 for $t2
 	syscall	
 	
-	#newline
-	la $a0, newLine
-	li $v0, 4
-	syscall
 
 	exit:
 			
